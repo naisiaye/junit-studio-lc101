@@ -29,6 +29,12 @@ public class BalancedBrackets {
             } else if (ch == ']') {
                 brackets--;
             }
+            if (!str.contains("[") && !str.contains("]")) {
+                return false;
+            }
+            if (brackets < 0) {
+                return false;
+            }
         }
         return brackets == 0;
     }
